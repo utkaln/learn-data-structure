@@ -1,5 +1,5 @@
 # learn-data-structure
-## Big O Complexity
+## Big O Time Complexity
 | Big O Complexity | Recommendation | Data Type | 
 | --- | --- | --- | 
 | O(log n) , O(1) | Best | | 
