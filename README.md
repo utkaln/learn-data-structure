@@ -1,4 +1,3 @@
-`# learn-data-structure
 ## Big O Time Complexity
 | Big O Complexity | Recommendation | Data Type | 
 | --- | --- | --- | 
