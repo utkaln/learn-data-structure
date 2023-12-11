@@ -19,9 +19,9 @@
 - **Stack** : Tracks of all the function calls
 
 ### Important Data Structures
-| DS | Usage | Good For | 
-| --- | --- | --- |
-| Arrays | | |
+| DS | Behavior | Big O | Good For | 
+| --- | --- | --- | --- | 
+| Arrays or List | Stores items sequentially | lookup: O(1), push: O(1), insert: O(n), delete: O(n)| 
 | Stack | | | 
 | Queues | | |
 | Linked Lists | | |
@@ -32,13 +32,18 @@
 
 
 ### Important Algorithms
-| Algos | Usage | Good For } 
+| Algos | Usage | Good For | 
 | --- | --- | --- |
-| Soring | | |
+| Sorting | | |
 | Dynamic Programming | | | 
 | Breadth First Search | | |
 | Depth First Search | | |
 | Recursion | | |
+
+
+## Details of Data Structures
+
+
 
 
 
