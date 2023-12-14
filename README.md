@@ -28,7 +28,7 @@
 | Trees | | | 
 | Tries | | |
 | Graphs | | |
-| Hash Tables | | | 
+| Hash Tables or Objects | Stores items each with a key | lookup: O(1), search: O(1), insert: O(1), delete: O(1) | 
 
 
 ### Important Algorithms
