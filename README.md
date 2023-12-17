@@ -21,10 +21,10 @@
 ### Important Data Structures
 | DS | Behavior | Big O | Good For | 
 | --- | --- | --- | --- | 
-| Arrays or List | Stores items sequentially | lookup: O(1), push: O(1), insert: O(n), delete: O(n)| 
+| Arrays or List | Stores items sequentially with auto assigned index. Hence must traverse sequentially | lookup: O(1), push: O(1), insert: O(n), delete: O(n)| 
 | Stack | | | 
 | Queues | | |
-| Linked Lists | | |
+| Linked Lists | Stores items sequentially, with one item linking to another, hence this has best of both Arrays and Hashmap | prepend: O(1), append: O(1), lookup: O(n), insert: O(n), delete: O(n)|
 | Trees | | | 
 | Tries | | |
 | Graphs | | |
