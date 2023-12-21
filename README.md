@@ -22,8 +22,8 @@
 | DS | Behavior | Big O | Good For | 
 | --- | --- | --- | --- | 
 | Arrays or List | Stores items sequentially with auto assigned index. Hence must traverse sequentially | lookup: O(1), push: O(1), insert: O(n), delete: O(n)| 
-| Stack | | | 
-| Queues | | |
+| Stack | LIFO - Can always access the last item. No random access. Less operations compared to hashmap, linkedlist | lookup: O(n), pop: O(1), push: O(1), peek: O(1) | 
+| Queues | FIFO - Can always access the first item, No random access | lookup: O(n), enqueue: O(1), dequeue: O(1), peek: O(1) |
 | Linked Lists | Stores items sequentially, with one item linking to another, hence this has best of both Arrays and Hashmap. Bi directional linked list is useful for reverse search, since it stores the previous element in addition to next | prepend: O(1), append: O(1), lookup: O(n), insert: O(n), delete: O(n)|
 | Trees | | | 
 | Tries | | |
