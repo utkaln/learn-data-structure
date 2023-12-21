@@ -110,7 +110,7 @@ module.exports = class LinkedListImpl {
   reverse() {
     //O(1)
     // If just head element present then return the same
-    if (this.head.next === null) {
+    if (!this.head.next) {
       return this.head;
     }
     let first = this.head;
@@ -120,8 +120,9 @@ module.exports = class LinkedListImpl {
       const third = second.next;
       second.next = first;
       first = second;
-      second = temp;
+      second = third;
     }
+    this.head.next = null;
     this.head = first;
     return this;
   }

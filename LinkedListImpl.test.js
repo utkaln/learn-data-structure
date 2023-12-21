@@ -58,6 +58,6 @@ describe("Test Linked List Implementation", () => {
   test("Linked List Test Reverse method ", () => {
     linkedList.reverse();
     console.log(linkedList.printList());
-    expect(linkedList.printList()).toEqual([999, 5, , 9, 15]);
+    expect(linkedList.printList()).toEqual([999, 5, 9, 15]);
   });
 });
