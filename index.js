@@ -1,7 +1,7 @@
 function findCommonElements(source, target) {
   let t_start = performance.now();
   if (source == undefined || target == undefined) {
-    console.log("Empty input sent !");
+    //console.log("Empty input sent !");
     //reportTime(t_start);
     return true;
   } else {
@@ -9,7 +9,7 @@ function findCommonElements(source, target) {
       if (source[index] === target) {
         //console.log("Found a match !");
       } else {
-        console.log("No match !");
+        //console.log("No match !");
       }
     }
     reportTime(t_start);

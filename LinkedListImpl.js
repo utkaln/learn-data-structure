@@ -3,7 +3,6 @@ module.exports = class LinkedListImpl {
   constructor(val) {
     this.head = new Node(val);
     this.tail = this.head;
-    //this.head.next = this.tail;
     this.length = 1;
     return this;
   }
