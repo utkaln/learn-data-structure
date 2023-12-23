@@ -1,7 +1,7 @@
 module.exports = class QueueImpl {
   constructor(val) {
     this.first = new Node(val);
-    this.last = new Node(val);
+    this.last = null;
     this.first.next = this.last;
     this.length = 1;
     return this;

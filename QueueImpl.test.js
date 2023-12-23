@@ -1,4 +1,4 @@
-const queue = require("./QueueImpli");
+const queue = require("./QueueImpl");
 
 describe("Test Queue Implementation", () => {
   let que = new queue(10);
@@ -19,13 +19,13 @@ describe("Test Queue Implementation", () => {
   });
 
   test("Test queue dequeue first item", () => {
-    stackImpl.pop();
-    expect(stackImpl.first.value).toEqual(20);
+    que.dequeue();
+    expect(que.first.value).toEqual(20);
   });
 
   test("Test pop for only element", () => {
     let queSingle = new queue("Only Element");
-    stackImplSingle.pop();
-    expect(stackImplSingle.first).toEqual(null);
+    queSingle.dequeue();
+    expect(queSingle.first).toEqual(null);
   });
 });
