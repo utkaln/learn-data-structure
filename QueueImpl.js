@@ -1,8 +1,8 @@
 module.exports = class QueueImpl {
   constructor(val) {
     this.first = new Node(val);
-    this.last = null;
-    this.first.next = this.last;
+    //this.last = new Node(val);
+    //this.first.next = this.last;
     this.length = 1;
     return this;
   }
@@ -19,9 +19,9 @@ module.exports = class QueueImpl {
       this.first = null;
       this.last = null;
       this.length = 0;
+      return this;
     }
 
-    // if there is more than one element, then remove the top and make it the new top
     this.first = this.first.next;
     this.length--;
     return this;
@@ -30,6 +30,12 @@ module.exports = class QueueImpl {
   // O(1)
   enqueue(val) {
     const newNode = new Node(val);
+    if (!this.last) {
+      this.last = newNode;
+      this.first.next = this.last;
+      this.length++;
+      return this;
+    }
     this.last.next = newNode;
     this.length++;
     return this;

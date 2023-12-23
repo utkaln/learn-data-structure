@@ -23,7 +23,7 @@ describe("Test Queue Implementation", () => {
     expect(que.first.value).toEqual(20);
   });
 
-  test("Test pop for only element", () => {
+  test("Test dequeue for only element", () => {
     let queSingle = new queue("Only Element");
     queSingle.dequeue();
     expect(queSingle.first).toEqual(null);
