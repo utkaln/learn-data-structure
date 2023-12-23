@@ -1,24 +1,24 @@
-const queue = require("./QueueImpl");
+const queue = require("./QueueImpli");
 
 describe("Test Queue Implementation", () => {
   let que = new queue(10);
 
-  test("Test stack constructor top element", () => {
+  test("Test queue constructor top element", () => {
     expect(que.first.value).toEqual(10);
   });
 
-  test("Test stack constructor length", () => {
+  test("Test queue constructor length", () => {
     expect(que.length).toBe(1);
   });
 
-  test("Test stack enqueue of 3 items", () => {
+  test("Test queue enqueue of 3 items", () => {
     que.enqueue(20);
     que.enqueue(30);
     que.enqueue(40);
     expect(que.length).toEqual(4);
   });
 
-  test("Test stack dequeue first item", () => {
+  test("Test queue dequeue first item", () => {
     stackImpl.pop();
     expect(stackImpl.first.value).toEqual(20);
   });
