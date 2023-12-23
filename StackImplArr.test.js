@@ -1,18 +1,14 @@
-const stack = require("./StackImpl");
+const stackArr = require("./StackImplArray");
 
-describe("Test stack Implementation", () => {
-  let stackImpl = new stack(10);
+describe("Test stack array Implementation", () => {
+  let stackImpl = new stackArr(10);
 
   test("Test stack constructor top element", () => {
-    expect(stackImpl.top.value).toEqual(10);
+    expect(stackImpl.peek()).toEqual(10);
   });
 
   test("Test stack constructor length", () => {
     expect(stackImpl.length).toBe(1);
-  });
-
-  test("Test stack constructor bottom element", () => {
-    expect(stackImpl.bottom).toEqual(null);
   });
 
   test("Test stack push of 3 items", () => {
@@ -28,7 +24,7 @@ describe("Test stack Implementation", () => {
   });
 
   test("Test pop for only element", () => {
-    let stackImplSingle = new stack("Only Element");
+    let stackImplSingle = new stackArr("Only Element");
     stackImplSingle.pop();
     expect(stackImplSingle.length).toEqual(0);
   });
