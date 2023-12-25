@@ -21,17 +21,19 @@ module.exports = class BinaryTree {
     }
 
     let checkNode = this.root;
-    if (val >= this.root.value) {
-      if (!checkNode.right) {
-        this.root.right = checkNode;
+    while (checkNode) {
+      if (val < checkNode.value) {
+        if (!checkNode.left) {
+          checkNode.left = newNode;
+          return this;
+        }
+        checkNode = checkNode.left;
       } else {
-        while (checkNode.right) {}
-      }
-    } else {
-      if (!checkNode.left) {
-        this.root.left = checkNode;
-      } else {
-        while (checkNode) {}
+        if (!checkNode.right) {
+          checkNode.right = newNode;
+          return this;
+        }
+        checkNode = checkNode.right;
       }
     }
   }
