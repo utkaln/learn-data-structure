@@ -1,4 +1,4 @@
-## Big O Time Complexity
+# Big O Time Complexity
 
 | Big O Complexity | Recommendation     | Data Type                   |
 | ---------------- | ------------------ | --------------------------- |
@@ -20,7 +20,7 @@
 - **Heap** : Memory used by variables
 - **Stack** : Tracks of all the function calls
 
-### Data Structures Key Attributes
+## Data Structures Key Attributes
 
 | DS                     | Behavior                                                                                                                                                                                                                                                                                                                              | Big O                                                                 | Good For                                  |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- |
@@ -45,9 +45,7 @@
 
 ## Details of Data Structures
 
-#### Important Tree Structures
-
-##### Binary Tree
+### Binary Tree
 
 - Each node must have 0 or 2 children (subnodes)
 - The attributes of a binary tree node is : value | left node | right node
@@ -56,25 +54,25 @@
 - **Perfect Binary Tree** : Has exactly two nodes coming out of each node. With every level doubling in node count compared to previous node. Number of nodes in a level is : `2^L -1`
 - **Full Binary Tree** : Has 0 or two nodes as children from each parent node
 
-##### Binary Search Tree (BST)
+#### Binary Search Tree (BST)
 
 - Subset of binary tree. Hence it allows a maximum of 2 child nodes
 - Additionally the right node has always greater value than the parent node and the left node always has the lower value than the parent node
 - One problem with BST implementation is if data keeps adding to one side only, it eventually acts like a linked list. Thus look up becomes traversing through each node. This makes search more like O(n) and not desired O(log n)
 - **Key Attributes** : Better Search than O(n), Ordered data, Flexible size. Cons: There is no O(1) operation
 
-##### AVL Tree
+#### AVL Tree
 
 - Type of Binary tree that self balances
 - Self balancing helps in faster look up, since it reduces further hierarchy
 - However this takes O(n) extra space
 
-##### Red-Black Trees
+#### Red-Black Trees
 
 - Type of Binary Tree that self balances, similar to that of AVL tree
 - Key difference is it performs better for add, remove tasks compared to AVL trees
 
-##### Binary Heaps
+#### Binary Heaps
 
 - Type of Binary tree, where the highest value always stays at the root and follows a descending order of values down the nodes
 - Node allocation first starts left then to right
@@ -82,7 +80,7 @@
 - Used for Priority queue and finding maximum or minimum from the data
 - **Key Attributes** : Better Search than O(n), Priority ordered data, Flexible Size, Fast Insert. Cons: slow lookup
 
-#### Important Graph Structures
+### Important Graph Structures
 
 - **Directed**:
 - **Undirected**:
@@ -91,9 +89,11 @@
 - **Cyclic**:
 - **Uncyclic**:
 
-### Algorithms
+---
 
-#### Recursion
+## Algorithms
+
+### Recursion
 
 - Must have a conditional return on when to terminate execution
 - Must return the function statement, so the return value can be bubbled to outside
@@ -112,38 +112,38 @@
 - Recursion is more useful with Dynamic programming, or traversing through tree structure where the loop call is unknown
 - Recursion helps in Divide and Conquer strategy
 
-#### Sorting
+### Sorting
 
-##### Bubble Sort
+#### Bubble Sort
 
 - One of the most basic soring form, that iteratively keeps pushing the largest value to one end
 - It is one of the most low efficiency sorting algorithms
 - **Time Complexity** : `O(n^2)`
 
-##### Selection Sort
+#### Selection Sort
 
 - Picks the absolute minmum value by comparing through the items, then chooses the next minmum
 - **Time Complexity** : `O(n^2)`
 
-##### Insertion Sort
+#### Insertion Sort
 
 - Useful when it is almost sorted or small dataset. In this case which is Best case the time complexity is `O(n)`
 - **Time Complexity** : `O(n^2)` (Average case)
 
-##### Merge Sort
+#### Merge Sort
 
 - Divides the elements by 2 with every iteration, until only two nodes left to compare. Then compare at the unit level and then merge them back to form a reverse of a binary tree
 - Merge Sort turns out to the one of the most efficient algorithms for sorting
 - **Time Complexity** : `O(n log n)`
 
-##### Quick Sort
+#### Quick Sort
 
 - Another type of advanced merge that is as good as Merge Sort. It starts with a random pivot point from the input and started instead of diving from the middle
 - **Time Complexity** : `O(n log n)`
 - Quick sort has a better space complexity compared to that of Merge sort
 - Quick sort is fastest of all choices in most cases, however it's worst case can be `O(n^2)`. This is dependent on choosing pivot point
 
-#### Sort Preferences:
+### Sort Preferences:
 
 | Sort Type      | Prefer When                                                                                                                      | Time Complexity (Best / Average / Worst) |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -152,6 +152,43 @@
 | Selection Sort | No where                                                                                                                         | O(n^2)                                   |
 | Merge Sort     | Most preferred if memory is not a concern, fast, consistent                                                                      | O(n log n)                               |
 | Quick Sort     | Most popular, since it has advantage on space complexity compared to Merge Sort, however the worst time complexity can be O(n^2) | O(n log n) / O(n log n) / O(n^2)         |
+
+### Searching / Traversal Algorithms
+
+#### Linear Search
+
+- Sequentially check each element to find target value
+- **Time Complexity** : `O(n)`
+
+#### Binary Search
+
+- Sequential check on a sorted list
+- **Time Complexity** : `O(log n)` . This is better than linear search
+
+#### Breadth First Search
+
+- Start traversing from Root node, then go left to right at next level, before traversing to next level
+- Uses extra memory to keep track of all the nodes and its childrenn it traversed while trying to get to the target value
+- More useful when chances of finding the target value in shortest path or if the value is somewhat predictable about its location
+- **Time Complexity** : `O(n)`
+
+#### Depth First Search
+
+- In contrast to Breadth first, this traversal starts from root node and goes to the left node and keeps going down on the left node path to further levels, until it hits a leaf node. Upon encountering a leaf node, it then comes back to its parent node and then traverses to adjacent right node that it has not explored
+- Requires less additional memory, as it does not need to keep track of all the children underneath. However, it is slower than Breadth First
+- More useful when the data is buried deep in the nodes or unknown
+- **Time Complexity** : `O(n)`
+
+#### Decision Matrix
+
+| Situation                                         | BFS | DFS |
+| ------------------------------------------------- | --- | --- |
+| Solution is not far from root                     | X   |     |
+| Tree is deep, and solutions are rare              | X   |     |
+| Tree is very wide                                 |     | X   |
+| Solution is frequent but located deep in the tree |     | X   |
+| Determine whether a path exists between 2 nodes   |     | X   |
+| Find Shortest Path                                | X   |     |
 
 ## References
 
