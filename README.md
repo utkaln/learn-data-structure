@@ -157,27 +157,31 @@
 
 #### Linear Search
 
-- Sequentially check each element to find target value
 - **Time Complexity** : `O(n)`
+- Sequentially check each element to find target value
 
 #### Binary Search
 
-- Sequential check on a sorted list
 - **Time Complexity** : `O(log n)` . This is better than linear search
+- Sequential check on a sorted list
 
 #### Breadth First Search
 
+- **Time Complexity** : `O(n)`
 - Start traversing from Root node, then go left to right at next level, before traversing to next level
 - Uses extra memory to keep track of all the nodes and its childrenn it traversed while trying to get to the target value
 - More useful when chances of finding the target value in shortest path or if the value is somewhat predictable about its location
-- **Time Complexity** : `O(n)`
 
 #### Depth First Search
 
+- **Time Complexity** : `O(n)`
 - In contrast to Breadth first, this traversal starts from root node and goes to the left node and keeps going down on the left node path to further levels, until it hits a leaf node. Upon encountering a leaf node, it then comes back to its parent node and then traverses to adjacent right node that it has not explored
 - Requires less additional memory, as it does not need to keep track of all the children underneath. However, it is slower than Breadth First
 - More useful when the data is buried deep in the nodes or unknown
-- **Time Complexity** : `O(n)`
+- DFS is done with three known strategies:
+  - **In Order**: All the items are return in ascending order regardless of parent child place. This helps in getting data back sorted
+  - **Pre Order**: Items returned starts with root then traverses down to the deepest level on left side node, then goes to right node of the bottom most node. This helps in recreating a Binary tree structure from the returned data
+  - **Post Order**: Opposite of preorder. Starts at the left most leaf node, then traverses to the parent. Then looks more next right leaf node and then parent. After that traverses back to parent node from left to right.
 
 #### Decision Matrix
 
