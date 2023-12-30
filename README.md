@@ -171,6 +171,7 @@
 - Start traversing from Root node, then go left to right at next level, before traversing to next level
 - Uses extra memory to keep track of all the nodes and its childrenn it traversed while trying to get to the target value
 - More useful when chances of finding the target value in shortest path or if the value is somewhat predictable about its location
+- [JS Implementation](https://github.com/utkaln/learn-data-structure/blob/master/algos/BFS.js)
 
 #### Depth First Search
 
