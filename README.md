@@ -202,7 +202,14 @@
 - When graphs are weighted, then for fastest search use Dijkstra or Bellman-Ford algorithms
 - Additionally Bellman algo can handle negative weights
 - Dijkstra algo on the other hand is more efficient and faster compared to Bellman
-- Hence if you see
+- Hence if you see only positive numbers as weights prefer Dijkstra, if there are negative weights involved choose Bellman
+
+### Dynamic Programming
+
+- It is a concept similar to recursion, where function uses a cache attribute to store intermittent data to make the function execution more efficient. The implementation is called **Memoization**
+- Dynamic Programming uses concept of recursive function, cache and to use cache requires concept of method closure
+- This can make some functions with bad time complexity of `O(2^n)` to `O(n)`
+- [Example Implementation]()
 
 ## References
 
