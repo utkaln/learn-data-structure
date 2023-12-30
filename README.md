@@ -186,14 +186,23 @@
 
 #### Decision Matrix
 
-| Situation                                         | BFS | DFS |
-| ------------------------------------------------- | --- | --- |
-| Solution is not far from root                     | X   |     |
-| Tree is deep, and solutions are rare              | X   |     |
-| Tree is very wide                                 |     | X   |
-| Solution is frequent but located deep in the tree |     | X   |
-| Determine whether a path exists between 2 nodes   |     | X   |
-| Find Shortest Path                                | X   |     |
+| Situation                                                          | BFS          | DFS |
+| ------------------------------------------------------------------ | ------------ | --- |
+| Solution is not far from root                                      | X            |     |
+| Tree is deep, and solutions are rare                               | X            |     |
+| Tree is very wide                                                  |              | X   |
+| Solution is frequent but located deep in the tree                  |              | X   |
+| Determine whether a path exists between 2 nodes                    |              | X   |
+| Find Shortest Path                                                 | X            |     |
+| Find Shortest Path with weights given positive values only         | Dijkstra     |     |
+| Find Shortest Path with weights given positive and negative values | Bellman-Ford |     |
+
+#### Dijkstra, Bellman-Ford Algorithm for fastest search
+
+- When graphs are weighted, then for fastest search use Dijkstra or Bellman-Ford algorithms
+- Additionally Bellman algo can handle negative weights
+- Dijkstra algo on the other hand is more efficient and faster compared to Bellman
+- Hence if you see
 
 ## References
 
